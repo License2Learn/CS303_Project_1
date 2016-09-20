@@ -1,0 +1,27 @@
+//Term Class that contains the exponent and coefficient.
+//Also holds comparison operators to compare exponents.
+
+class Term {
+
+private:
+    //Exponent and coefficient variables.
+    int exponent;
+    int coeff;
+
+public:
+    // Constructor
+    Term(int expo, int coef)
+    {
+        exponent = expo;
+        coeff = coef;
+    }
+    // Comparison operators for exponents
+    friend bool operator==(const Term &t1, const Term &t2)
+    {
+        return t1.exponent == t2.exponent;
+    }
+    friend bool operator>(const Term &t1, const Term &t2)
+    {
+        return t1.exponent > t2.exponent;
+    }
+};
